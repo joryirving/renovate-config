@@ -2,14 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
+    "docker:enableMajor",
+    "mergeConfidence:all-badges",
     ":dependencyDashboard",
     ":disableRateLimiting",
-    "docker:enableMajor",
     ":enablePreCommit",
-    "mergeConfidence:all-badges",
+    ":separatePatchReleases",
     "github>joryirving/renovate-config:autoMergeDocker",
     "github>joryirving/renovate-config:autoMergeGithubActions",
-    "github>joryirving/renovate-config:commitMessage",
     "github>joryirving/renovate-config:customManagers",
     "github>joryirving/renovate-config:labels",
     "github>joryirving/renovate-config:semanticCommits"
