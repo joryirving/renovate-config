@@ -7,7 +7,6 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     ":enablePreCommit",
-    ":separatePatchReleases",
     "github>joryirving/renovate-config:autoMergeDocker",
     "github>joryirving/renovate-config:autoMergeGithubActions",
     "github>joryirving/renovate-config:customManagers",
