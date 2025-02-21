@@ -42,6 +42,11 @@
       "semanticCommitType": "ci",
       "semanticCommitScope": "github-action",
       "commitMessageTopic": "action {{depName}}"
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "semanticCommitScope": "github-release",
+      "commitMessageTopic": "release {{depName}}"
     }
   ]
 }
