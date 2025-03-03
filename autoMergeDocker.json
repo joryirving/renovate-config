@@ -7,7 +7,7 @@
       "automerge": true,
       "automergeType": "branch",
       "matchUpdateTypes": ["digest"],
-      "matchPackagePrefixes": ["ghcr.io/bjw-s", "ghcr.io/bjw-s-labs", "ghcr.io/onedr0p", "ghcr.io/joryirving"]
+      "matchPackageNames": ["/bjw-s/", "/bjw-s-labs/", "/onedr0p/", "/joryirving/"]
     }
   ]
 }
