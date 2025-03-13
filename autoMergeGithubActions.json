@@ -7,7 +7,8 @@
       "matchDatasources": ["github-tags"],
       "automerge": true,
       "automergeType": "branch",
-      "matchUpdateTypes": ["minor", "patch", "digest"]
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "ignoreTests": true
     }
   ]
 }

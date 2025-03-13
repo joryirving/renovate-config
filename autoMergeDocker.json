@@ -7,7 +7,8 @@
       "automerge": true,
       "automergeType": "branch",
       "matchUpdateTypes": ["digest"],
-      "matchPackageNames": ["/bjw-s/", "/bjw-s-labs/", "/onedr0p/", "/joryirving/"]
+      "matchPackageNames": ["/bjw-s/", "/bjw-s-labs/", "/onedr0p/", "/joryirving/"],
+      "ignoreTests": true
     }
   ]
 }
