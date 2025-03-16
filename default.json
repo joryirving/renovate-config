@@ -8,7 +8,7 @@
     ":disableRateLimiting",
     ":enablePreCommit",
     "github>joryirving/renovate-config:autoMergeDocker",
-    // "github>joryirving/renovate-config:autoMergeGithubActions",
+    "github>joryirving/renovate-config:autoMergeGithubActions",
     "github>joryirving/renovate-config:customManagers",
     "github>joryirving/renovate-config:labels",
     "github>joryirving/renovate-config:semanticCommits"
