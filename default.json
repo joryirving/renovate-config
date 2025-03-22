@@ -10,7 +10,8 @@
     "mergeConfidence:all-badges",
     ":automergeBranch",
     ":dependencyDashboard",
-    ":disableRateLimiting"
+    ":disableRateLimiting",
+    ":timezone(America/Edmonton)"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": [
