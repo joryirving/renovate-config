@@ -6,6 +6,7 @@
     "helpers:pinGitHubActionDigests",
     "github>joryirving/renovate-config:autoMerge.json5",
     "github>joryirving/renovate-config:labels.json5",
+    "github>joryirving/renovate-config:packageRules.json5",
     "github>joryirving/renovate-config:semanticCommits.json5",
     "mergeConfidence:all-badges",
     ":automergeBranch",
