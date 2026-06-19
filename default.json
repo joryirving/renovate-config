@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
-    "helpers:pinGitHubActionDigests",
+    "helpers:pinGitHubActionDigestsToSemver",
     "github>joryirving/renovate-config:autoMerge.json5",
     "github>joryirving/renovate-config:labels.json5",
     "github>joryirving/renovate-config:mise.json5",
@@ -16,6 +16,10 @@
     ":timezone(America/Edmonton)"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 3am on the first day of the month"]
+  },
   "suppressNotifications": [
     "prEditedNotification",
     "prIgnoreNotification"
