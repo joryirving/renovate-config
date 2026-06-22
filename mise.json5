@@ -11,6 +11,17 @@
       lockFileMaintenance: {
         enabled: true,
       },
+      // npm-backed mise tools (e.g. oxfmt) can only be locked once their node is
+      // installed. The renovate operator image has no usable node for mise, so it
+      // silently drops them from mise.lock and `mise install --locked` then fails on
+      // every PR. Run `mise install` (installs the config-pinned node) before
+      // `mise lock` so the regenerated lock is complete. Requires `mise install &&
+      // mise lock` in allowedCommands (RENOVATE_ALLOWED_COMMANDS) on the operator.
+      postUpgradeTasks: {
+        commands: ["mise install && mise lock"],
+        fileFilters: ["**/mise.lock"],
+        executionMode: "branch",
+      },
     },
   ],
 }
