@@ -15,10 +15,13 @@
       // installed. The renovate operator image has no usable node for mise, so it
       // silently drops them from mise.lock and `mise install --locked` then fails on
       // every PR. Run `mise install` (installs the config-pinned node) before
-      // `mise lock` so the regenerated lock is complete. Requires `mise install &&
-      // mise lock` in allowedCommands (RENOVATE_ALLOWED_COMMANDS) on the operator.
+      // `mise lock` so the regenerated lock is complete. NOTE: Renovate runs
+      // post-upgrade task commands without a shell, so `&&` chaining is parsed as
+      // mise tool names ("&&@latest", "mise@latest", "lock@latest"). Keep the
+      // commands as separate entries, and allow each of `mise install` and
+      // `mise lock` individually in allowedCommands (RENOVATE_ALLOWED_COMMANDS).
       postUpgradeTasks: {
-        commands: ["mise install && mise lock"],
+        commands: ["mise install", "mise lock"],
         fileFilters: ["**/mise.lock"],
         executionMode: "branch",
       },
